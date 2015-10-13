@@ -12,7 +12,6 @@ RUN set -x \
 # can perform more comprehensive testing
 ENV OPENSSL_VERSION 1.0.2-chacha
 ENV OPENSSL_DOWNLOAD_URL https://github.com/PeterMosmans/openssl/archive/1.0.2-chacha.tar.gz
-ENV OPENSSL_DOWNLOAD_SHA1 9bf6c245fcf97b3d2ea90a5cff5e771193c0d6cb
 
 RUN buildDeps='gcc libc6-dev make perl zlib1g-dev' \
   && set -x \
@@ -20,7 +19,6 @@ RUN buildDeps='gcc libc6-dev make perl zlib1g-dev' \
     $buildDeps \
   && rm -rf /var/lib/apt/lists/* \
 	&& curl -sSL "$OPENSSL_DOWNLOAD_URL" -o  openssl.tar.gz \
-	&& echo "$OPENSSL_DOWNLOAD_SHA1 *openssl.tar.gz" | sha1sum -c - \
 	&& mkdir -p /usr/src/openssl \
 	&& tar -xzf openssl.tar.gz -C /usr/src/openssl --strip-components=1 \
 	&& rm openssl.tar.gz \
