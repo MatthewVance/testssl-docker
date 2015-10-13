@@ -15,7 +15,7 @@
 Run your testssl container with the following command to run testssl.sh, replacing `<options>` with supported testssl.sh flags:
 
 ```console
-$ docker run -t --rm matthewvance/testssl:2.6 <options>
+$ docker run -t --rm mvance/testssl:2.6 <options>
 ```
 
 For example, running `$ docker run -t --rm matthewvance/testssl:2.6 --protocols 127.0.0.1` would check TLS/SSL protocols against localhost, assuming an https service is running on localhost.
@@ -25,7 +25,7 @@ For example, running `$ docker run -t --rm matthewvance/testssl:2.6 --protocols 
 Run your testssl container with the following command to obtain an interactive bash shell.
 
 ```console
-$ docker run -i --entrypoint /bin/bash -t --rm matthewvance/testssl:2.6
+$ docker run -i --entrypoint /bin/bash -t --rm mvance/testssl:2.6
 ```
 
 Within the container's shell, you can then run testssl.sh as if it was any other program installed in your `$PATH`.
@@ -35,14 +35,14 @@ Within the container's shell, you can then run testssl.sh as if it was any other
 Run your testssl container with the following command to access the help file for testssl.sh.
 
 ```console
-$ docker run -t --rm matthewvance/testssl:2.6
+$ docker run -t --rm mvance/testssl:2.6
 ```
 
 For more information on using testssl.sh, visit [https://testssl.sh/](https://testssl.sh/).
 
 # Known issues
 
-**DNS resolution** currently fails. As such, running something like `$ docker run -t --rm matthewvance/testssl:2.6 example.com` results in the following error:
+**DNS resolution** currently fails. As such, running something like `$ docker run -t --rm mvance/testssl:2.6 example.com` results in the following error:
 
 ```console
 Fatal error: No IPv4 address for "example.com" available
