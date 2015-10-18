@@ -6,6 +6,7 @@ RUN set -x \
   && apt-get update && apt-get install -y --no-install-recommends \
 		ca-certificates \
 		curl \
+		bsdmainutils \
   && rm -rf /var/lib/apt/lists/* \
 
 # Build OpenSSL with additional ciphers and vulnerable protocols so testssl.sh
