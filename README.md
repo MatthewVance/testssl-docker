@@ -40,17 +40,6 @@ $ docker run -t --rm mvance/testssl:2.6
 
 For more information on using testssl.sh, visit [https://testssl.sh/](https://testssl.sh/).
 
-# Known issues
-
-**DNS resolution** currently fails. As such, running something like `$ docker run -t --rm mvance/testssl:2.6 example.com` results in the following error:
-
-```console
-Fatal error: No IPv4 address for "example.com" available
-```
-As a workaround, always use the IP address when specifying the `URI` parameter of testssl.sh.
-
-If you know how to resolve this issue, please initiate a pull request. Interestingly, running `ping -c 3 example.com` from within the container performs DNS resolution correctly so I am unsure as to why the testssl.sh script is unable to do so.
-
 # Supported Docker versions
 
 This image is tested on Docker version 1.8.2.

@@ -4,9 +4,10 @@ MAINTAINER Matthew Vance
 # Install the necessary tools
 RUN set -x \
   && apt-get update && apt-get install -y --no-install-recommends \
+		bsdmainutils \
 		ca-certificates \
 		curl \
-		bsdmainutils \
+		dnsutils \
   && rm -rf /var/lib/apt/lists/* \
 
 # Build OpenSSL with additional ciphers and vulnerable protocols so testssl.sh
