@@ -43,7 +43,7 @@ For more information on using testssl.sh, visit [https://testssl.sh/](https://te
 
 # Supported Docker versions
 
-This image is tested on Docker version 1.8.2.
+This image is tested on Docker version 1.12.3.
 
 Use on older versions at your own risk.
 
