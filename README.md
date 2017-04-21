@@ -1,6 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
-- [`2.8rc3`, `latest` (*2.8rc3/Dockerfile*)](https://github.com/MatthewVance/testssl-docker/tree/master/2.8rc3)
+- [`2.8`, `latest` (*2.8/Dockerfile*)](https://github.com/MatthewVance/testssl-docker/tree/master/2.8)
+- [`2.8rc3` (*2.8rc3/Dockerfile*)](https://github.com/MatthewVance/testssl-docker/tree/master/2.8rc3)
 - [`2.6`, (*2.6/Dockerfile*)](https://github.com/MatthewVance/testssl-docker/tree/master/2.6)
 
 ## What is testssl.sh?
@@ -16,17 +17,17 @@
 Run your testssl container with the following command to run testssl.sh, replacing `<options>` with supported testssl.sh flags:
 
 ```console
-$ docker run -t --rm mvance/testssl:2.8rc3 <options>
+$ docker run -t --rm mvance/testssl:2.8 <options>
 ```
 
-For example, running `$ docker run -t --rm matthewvance/testssl:2.8rc3 --protocols 127.0.0.1` would check TLS/SSL protocols against localhost, assuming an https service is running on localhost.
+For example, running `$ docker run -t --rm matthewvance/testssl:2.8 --protocols 127.0.0.1` would check TLS/SSL protocols against localhost, assuming an https service is running on localhost.
 
 ### Interactive shell
 
 Run your testssl container with the following command to obtain an interactive bash shell.
 
 ```console
-$ docker run -i --entrypoint /bin/bash -t --rm mvance/testssl:2.8rc3
+$ docker run -i --entrypoint /bin/bash -t --rm mvance/testssl:2.8
 ```
 
 Within the container's shell, you can then run testssl.sh as if it was any other program installed in your `$PATH`.
@@ -36,7 +37,7 @@ Within the container's shell, you can then run testssl.sh as if it was any other
 Run your testssl container with the following command to access the help file for testssl.sh.
 
 ```console
-$ docker run -t --rm mvance/testssl:2.8rc3
+$ docker run -t --rm mvance/testssl:2.8
 ```
 
 For more information on using testssl.sh, visit [https://testssl.sh/](https://testssl.sh/).
