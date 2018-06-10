@@ -21,7 +21,7 @@ Run your testssl container with the following command to run testssl.sh, replaci
 $ docker run -t --rm mvance/testssl:2.9.5 <options>
 ```
 
-For example, running `$ docker run -t --rm matthewvance/testssl:2.8 --protocols 127.0.0.1` would check TLS/SSL protocols against localhost, assuming an https service is running on localhost.
+For example, running `$ docker run -t --rm mvance/testssl:2.8 --protocols 127.0.0.1` would check TLS/SSL protocols against localhost, assuming an https service is running on localhost.
 
 ### Interactive shell
 
